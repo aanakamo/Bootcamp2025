@@ -121,9 +121,9 @@ time flye --nano-hq R491.merged.rmdup.fastq.gz -t 1 --out-dir flye_my_run
 ```
 Now while this is running you can use ctrl+a+d to exit your screen and reattach with `screen -r bootcamp`
 
-> Note: Flye took me about 3 hours to run on one thread.
+> Note: Flye took over 5 hours to run on one thread.
 
-In the interest of time, it would be a good idea to grab the flye output from our shared folder and continue to the next step. You can always try running flye all the way through on your own time (it would be a good idea to use tmux, screen, or submit a job if you do so).
+In the interest of time, it would be a good idea to grab the flye output from our shared folder and continue to the next step. You can always try running flye all the way through on your own time (it would be a good idea to use tmux, screen, or submit a job if you do so, using more threads).
 ```
 cp -r /hb/groups/bmebootcamp/2025/R491_results/flye_out .
 ```
@@ -171,7 +171,7 @@ mkdir quast
 
 time quast flye_out/assembly.fasta --nanopore R491.merged.rmdup.fastq.gz -t 1 -o quast --circos --k-mer-stats --glimmer --conserved-genes-finding --rna-finding --est-ref-size 30000000
 ```
-> Quast took me about 20 minutes to run on 1 thread.  
+> Quast took about 20 minutes to run on 1 thread.  
 
 Take some time to research the metrics and figures that QUAST produces, and discuss as a group. Which ones are informative about the quality of our assembly?
 
