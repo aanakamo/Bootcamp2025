@@ -43,16 +43,11 @@ Start an interactive job (that will last for 5 hours) by running:
 screen -S bootcamp
 
 ## request resources
-salloc --partition=128x24 --time=05:00:00 --mem=4G --tasks=1 --cpus-per-task=1
+salloc --partition=instruction --time=05:00:00 --mem=4G --tasks=1 --cpus-per-task=1
 ```
 If you want, you can see what all the options mean by running `salloc -h`, or visiting [this humminbird tutorial](https://hummingbird.ucsc.edu/documentation/getting-an-interactive-allocation-for-instructional-use/).
 
-Once granted resources on a node, ssh to that node
-```
-ssh ${SLURM_NODELIST}
-```
-
-Once you ssh to the node where you've been granted resources, you should see the host in the terminal prompt change from the login node (ie. `aanakamo@hb-login`) to a different node (ie. `aanakamo@hbnode-03`). It will also return you to your home directory, so change back into your bootcamp directory.
+Once you salloc, it should take you to the node where you've been granted resources, and you should see the host in the terminal prompt change from the login node (ie. `aanakamo@hb-login`) to a different node (ie. `aanakamo@hbnode-03`). It will also return you to your home directory, so change back into your bootcamp directory.
 ```
 cd bootcamp2025
 ```
@@ -154,7 +149,7 @@ We will use the tool [Quast](https://quast.sourceforge.net/docs/manual.html#sec2
 
 First, let's start a new interactive job. No need to start a screen this time, since quast finishes relatively quickly.
 ```
-salloc --partition=128x24 --time=05:00:00 --mem=4G --tasks=1 --cpus-per-task=1
+salloc --partition=instruction --time=05:00:00 --mem=4G --tasks=1 --cpus-per-task=1
 ssh ${SLURM_NODELIST}
 ```
 
