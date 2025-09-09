@@ -150,7 +150,6 @@ We will use the tool [Quast](https://quast.sourceforge.net/docs/manual.html#sec2
 First, let's start a new interactive job. No need to start a screen this time, since quast finishes relatively quickly.
 ```
 salloc --partition=instruction --time=05:00:00 --mem=4G --tasks=1 --cpus-per-task=1
-ssh ${SLURM_NODELIST}
 ```
 
 Now load the module:
