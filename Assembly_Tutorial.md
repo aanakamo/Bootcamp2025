@@ -1,6 +1,6 @@
 # De-novo assembly of a fungal plant pathogen genome
 
-This document contains instructions for generating a de-novo assembly of a fungal plant pathogen genome for BMEB bootcamp 2025. This is part 1 of the computational portion of the bootcamp.
+This document contains instructions for generating a de-novo assembly of a fungal plant pathogen genome for BMEB bootcamp 2025. This is part 1 of the computational portion of the bootcamp research project.
 
 I recommend that you clone this repository to your local computer, and open up this document in a text editor. That way you can save any notes or changes you make to the code in this tutorial (like file paths).
 
@@ -142,7 +142,6 @@ You should see the following files in your directory
 ```
 
 Consult the Flye manual about what these files represent. Which one contains the assembly? Discuss these files as a group.
-> Hint: take a look in `assembly_info.txt`  
 
 Once you're done, unload Flye before continuing to the next step.
 ```
@@ -189,9 +188,9 @@ What do the metrics and plots output by Quast tell us about the quality and comp
 
 ## 5. Independent project and presentation
 
-For the rest of bootcamp, your task is to find an interesting analysis to do with our _Wolbachia_ data. You may use the assembly, the sequencing reads, or both. This is **purposefully open-ended**, to give you practice with developing your own question or hypothesis, figuring out the research steps necessary to answer it, executing those steps, and presenting your work to others.  
+For the rest of bootcamp, your task is to find an interesting analysis to do with our _Ceratocystis_ data. You may use the assembly, the sequencing reads, or both. This is **purposefully open-ended**, to give you practice with developing your own question or hypothesis, figuring out the research steps necessary to answer it, executing those steps, and presenting your work to others.  
 
-We DO NOT expect everyone to come up with incredible groundbreaking results. The **worst thing you could do** would be to give up and not present anything, just because you couldn't get an analysis to work. Share your project idea, what you tried, what worked and what didn't, and what you learned from the project if you aren't able to get results for this independent portion.
+We DO NOT expect everyone to come up with incredible groundbreaking results. We do expect you to share your project idea, what you tried, what worked and what didn't, and what you learned from the project if you aren't able to get results for this independent portion.
 
 To get you started, we've come up with some project ideas you may use for the independent portion, but coming up with your own idea is highly encouraged! Follow your interests.
 
@@ -200,8 +199,8 @@ To get you started, we've come up with some project ideas you may use for the in
 - Find additional assembly tools and run them on our data. Compare their quality against our Flye assembly. Which assembly tool produces the best quality assembly?
 - Implement an algorithm to walk along the repeat graph produced by Flye `assembly_graph.gfa` and produce an assembly sequence. Compare your assembly to the one Flye produces.
 - Characterize the repetitive elements in our assembly (Hint: RepeatMasker)
-- Build a phylogeny with our _Wolbachia_ assembly and other species (Hint: USHER)
-- Comparative genomics: ([Mauve](https://darlinglab.org/mauve/mauve.html), [Mummer](https://mummer.sourceforge.net)) Are there interesting variations (rearrangements, changes in functional elements) between our assembly and other relevant datasets? (Hint: compare to the wRi assembly available on NCBI)
+- Build a phylogeny with our _Ceratocystis_ assembly and other fungal species
+- Comparative genomics: ([Mauve](https://darlinglab.org/mauve/mauve.html), [Mummer](https://mummer.sourceforge.net)) Are there interesting variations (rearrangements, changes in functional elements) between our assembly and other relevant datasets? (Hint: compare to another assembly in the _Ceratocystis_ genus available on NCBI)
 - Take the repeat graph produced by Flye and visualize it in [Bandage](https://github.com/rrwick/Bandage). What does this visualization show you about the repeat structure and quality of the assembly?
 - Present an in depth dive into QUAST performance metrics. Generate informative plots about the quality of our assemblies. Can you find any other tools to evaluate the quality of our assembly?
 
